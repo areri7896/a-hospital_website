@@ -217,3 +217,35 @@ section :nth-child(even){
     flex-wrap: wrap;
     gap: 2rem;
 }
+
+.about .row .image{
+    flex: 1 1 45rem;
+}
+
+.about .row .image img{
+    width: 100%;
+}
+
+.about .row .content{
+    flex: 1 1 45rem;
+}
+
+.about .row .content h3{
+    color:  var(--light-color);
+    padding: 1rem 0 ;
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.about .row .content p{
+    color: var(--light-color);
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.services .box-container{
+    display: grid;
+    grid-template-columns: auto-fit, minmax(27rem,1fr);
+    gap: 2rem;
+}
