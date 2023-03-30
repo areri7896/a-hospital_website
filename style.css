@@ -137,7 +137,25 @@ section :nth-child(even){
 }
 .Hamb .hamburger{
     height: 2px;
-    width: 10px;
-    
+    width: 30px;
+    margin:4px auto;
+    background-color: #fff;
 }
 
+.home{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+.home .image{
+    flex: 1 1 45rem;
+}
+
+.home .image img{
+    width: 100%;
+}
+
+.home .content{
+    flex: 1 1 45rem;
+}
