@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 :root{
     --green:#27E1C1;
@@ -274,6 +274,11 @@ section :nth-child(even){
     font-size: 1.4rem;
     line-height: 2;
 }
+.services .box-container .box .btn span{
+    color: #fff;
+    /* font-size: 1.4rem;
+    line-height: 2; */
+}
 
 .doctors{
     display: grid;
@@ -326,8 +331,12 @@ section :nth-child(even){
     border: var(--border);
     margin: 3rem;
 }
-
-.doctors .box-container .box .share:hover{
+.doctors .box-container:hover .box {
+    background: var(--green);
+    color: #fff;
+    box-shadow: var(--box-shadow);
+  }
+.doctors .box-container .box .share a:hover{
     background: var(--green);
     color: #fff;
     box-shadow: var(--box-shadow);
@@ -381,7 +390,7 @@ section :nth-child(even){
     padding: 1rem 4rem;
 }
 
-.Sponsors-Partners .box-container{
+.sponsors-partners .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap:2rem;
@@ -408,7 +417,7 @@ section :nth-child(even){
 }
 
 .sponsors-partners .box-container .box h3{
-    color:var(--light-color);
+    color:var(--darkgreen);
     font-size: 2.2rem;
     padding: 5rem 0;
 }
@@ -506,6 +515,10 @@ section :nth-child(even){
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
     gap:2rem;
+}
+.footer .box-container .box{
+    border: var(--border);
+    border-radius: .5rem;
 }
 
 .footer .box-container .box h3{
