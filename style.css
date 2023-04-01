@@ -117,6 +117,15 @@ section :nth-child(even){
     color: var(--light-color);
     margin-left: 2rem;
 }
+.navbar a{
+    display: block;
+     text-transform: uppercase;
+     text-decoration: none;
+     color: #fff;
+    border-bottom:2px solid transparent;
+    transition:0.5s ease;
+    transform: translateX(0%);
+  }
 
 .header .navbar a:hover{
     color: #fff;
@@ -127,12 +136,6 @@ section :nth-child(even){
 }
 
 .Hamb{
-    font-size: 2.5rem;
-    border-radius: .5rem;
-    background: var(--green);
-    color: #fff;
-    padding:1rem 1.5rem;
-    cursor: pointer;
     display: none;
 }
 .Hamb .hamburger{
@@ -141,6 +144,72 @@ section :nth-child(even){
     margin:4px auto;
     background-color: #fff;
 }
+@media only screen and (max-width: 760px){
+    nav{
+     justify-content: space-between;
+     padding: 0 5vw;
+   }
+   .header .navbar{
+     position: absolute;
+     right: 0;
+     top:8vh;
+     min-height:92vh;
+     background: #333;
+     display: flex;
+     flex-direction: column;
+     align-items: center;   
+     width: 50%;
+     margin: 0;
+     padding: 0;
+     transform: translateX(100%);
+     transition:All 0.5s ease-in;
+   }
+   .navbar a{
+     opacity: 0;
+  
+   }
+   .Hamb{
+     display: block;
+   }
+  
+ }
+ @media only screen and (max-width: 640px){
+   nav{
+     justify-content: space-between;
+     padding: 0 5vw;
+   }
+ }
+ .nav-active{
+   transform: translateX(0);
+ }
+ @media only screen and (max-width: 460px){
+   .navbar{
+     width: 100%;
+     transition:All 0.5s ease;
+   }
+ }
+ .nav-active{
+   transform: translateX(0);
+ }
+ @keyframes navLinkFade{
+   from{
+     opacity: 0;
+     transform: translateX(50px);
+   }
+   to{
+     opacity: 1;
+     transform: translateX(0);
+   }
+ }
+ .toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px );
+ }
+ .toggle .line2{
+    opacity: 0;
+ }
+ .toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px );
+ }
 
 .home{
     display: flex;
@@ -584,9 +653,10 @@ section{
     .Hamb{
         display: initial;
     }
-    .header .navbar{
+    .header #hidden {
         position: absolute;
-        top: 115%; right: 2rem;
+        top: 115%;
+        right: 2rem;
         border-radius: .5rem;
         box-shadow: var(--box-shadow);
         width: 30rem;
@@ -595,8 +665,14 @@ section{
         transform: scale(0);
         opacity: 0;
         transform-origin: top-right;
-        transition: none;
-    }
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      }
+      
+      .active-menu {
+        transform: scale(1);
+        opacity: 1;
+      }
+      
 
 .header .navbar .active{
     transform: scale(1);
@@ -608,7 +684,14 @@ section{
     font-size: 2rem;
     display: block;
     margin: 2.5rem;
-}
+    display: block;
+     text-transform: uppercase;
+     text-decoration: none;
+     color: #fff;
+    border-bottom:2px solid transparent;
+    transition:0.5s ease;
+    transform: translateX(0%);
+  }
 }
 
 @media screen and (max-width:600px){

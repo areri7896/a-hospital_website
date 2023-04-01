@@ -1,11 +1,23 @@
-let menu = document.querySelector('.hamb');
-let navbar = document.querySelector('.navbar');
-
-menu.onclick = ()=>{
-    menu.classList.toggle('fa-times');
-    navbar.classList.toggle('active');
-}
-window.onscroll = ()=>{
-    menu.classList.remove('fa-times');
-    navbar.classList.remove('active');
-}
+const navSlide = () => {
+    const burger = document.querySelector(".Hamb");
+    const nav = document.querySelector(".navbar");
+    const navLinks = document.querySelectorAll(".navbar a");
+  
+    burger.addEventListener("click", () => {
+      nav.classList.toggle("nav-active");
+  
+      navLinks.forEach((link, index) => {
+        if (link.style.animation) {
+          link.style.animation = "";
+        } else {
+          link.style.animation = `navLinkFade 0.5s ease forwards ${
+            index / 7 + 0.5
+          }s `;
+        }
+      });
+      burger.classList.toggle("toggle");
+    });
+    //
+  };
+  
+  navSlide();
