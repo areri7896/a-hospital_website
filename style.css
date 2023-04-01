@@ -180,8 +180,8 @@ section :nth-child(even){
 
 .icons-container{
     display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, maximum(20rem,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
@@ -246,8 +246,8 @@ section :nth-child(even){
 
 .services .box-container{
     display: grid;
-    grid-template-columns: auto-fit, minmax(27rem,1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2rem;
 }
 .services .box-container .box{
     background: #fff;
@@ -279,6 +279,11 @@ section :nth-child(even){
     display: grid;
     grid-template-columns: repeat(auto-fit);
     gap: 2rem;
+}
+.doctors .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2rem;
 }
 
 .doctors .box-container .box{
@@ -378,8 +383,8 @@ section :nth-child(even){
 
 .Sponsors-Partners .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(27rem,1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2rem;
 }
 
 .sponsors-partners .box-container .box{
