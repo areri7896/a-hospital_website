@@ -141,7 +141,27 @@ section :nth-child(even){
     margin:4px auto;
     background-color: #fff;
 }
-
+#hidden{
+    display: block;
+}
+@media screen and (max-width:600px) {
+    .Hamb{
+        display: block;
+    }
+    .header .navbar{
+        display: none;
+    }
+    .header #hidden{
+        display: none;
+        flex-direction: column;
+        width: 35%;
+        height: 45vh;
+        color: var(--green);
+        background-color: #fff;
+        border: var(--border) solid;
+        border-radius: .5rem;
+    }
+}
 .home{
     display: flex;
     align-items: center;

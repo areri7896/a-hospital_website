@@ -19,7 +19,7 @@
         <img src="./images/images/hospital.png" alt="">
         <a href="#" class="logo"><strong>Keroka</strong> District Hospital</a>
 
-        <nav class="navbar">
+        <nav class="navbar" id="hidden">
             <a href="#Home">Home</a>
             <a href="#Portal">Portal</a>
             <a href="#About">About</a>
@@ -541,6 +541,15 @@
             </div>
             <div class="credit"> created by <span><a href="mailto:arerirodney@gmail.com?subject=medical link"  >Rodney Areri</a></span></div>
         </section>
+
+        <script>
+            const hamburger = document.querySelector(".hamb");
+            const menu = document.querySelector("#hidden");
+            
+            hamburger.addEventListener("click", ()=>{
+            menu.classList.toggle("show");
+            });
+        </script>
         </body>
         </html>
         
