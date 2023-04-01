@@ -375,3 +375,21 @@ section :nth-child(even){
 .appointment .row form .btn{
     padding: 1rem 4rem;
 }
+
+.Sponsors-Partners .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem,1fr));
+    gap: 2rem;
+}
+
+.sponsors-partners .box-container .box{
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    padding: 2.5rem;
+    background: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
