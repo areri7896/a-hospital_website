@@ -173,7 +173,9 @@ section :nth-child(even){
     padding: 1rem 0;
     line-height: 1.8;
 }
-.home .content a{
+.home .content .btn{
+    display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
 }
@@ -529,17 +531,24 @@ section :nth-child(even){
 .footer .box-container .box a{
     display: block;
     font-size: 1.5rem;
-    color: var(--light-color);
+    color: var(--light-color); 
     padding: 1rem 0;
+}
+.footer .box-container .box a:hover{
+    color: var(--green);
+    border:1px #27E1C1 solid ;
+    border-radius: .5rem;
 }
 
 .footer .box-container .box a i{
     padding-right: .5rem;
+    margin: 5px;
     color: var(--green);
 }
 
 .footer .box-container .box a:hover i{
     padding-right: 2rem;
+    color: #ff0000;
 }
 
 .footer .credit{
@@ -552,6 +561,6 @@ section :nth-child(even){
     border-top: .1rem solid rgba(0, 0, 0, 0.1);
 }
 
-.footer .credit span{
+.footer .credit span a{
     color: var(--green);
 }
