@@ -117,11 +117,11 @@ section :nth-child(even){
     color: var(--light-color);
     margin-left: 2rem;
 }
-.navbar a{
-    display: block;
-     text-transform: uppercase;
-     text-decoration: none;
-     color: #fff;
+.navbar nav a{
+    display: flex;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
     border-bottom:2px solid transparent;
     transition:0.5s ease;
     transform: translateX(0%);
