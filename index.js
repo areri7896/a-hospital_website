@@ -41,7 +41,7 @@ var firebaseConfig = {
   storageBucket: "a-hospital-website.appspot.com",
   messagingSenderId: "17198961804",
   appId: "1:17198961804:web:eb568fd979fce262d497a9",
-  measurementId: "G-FH90XBSB7S"
+  measurementId: "G-FH90XBSB7S"}
 firebase.initializeApp(firebaseConfig);
 
 // Get a reference to the appointments collection in the database
