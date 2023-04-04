@@ -1,74 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="signUp.css">
+        <link rel="stylesheet" href="login.css">
+        <script  src="./signUp.js" defer type="module" ></script>
+    </head>
+    <body>
+        <div class="login-container">
+            <div id="main">
+                <h1>Sign In</h1>  
+                <input id="email" type="text" placeholder="Email"></input>
+                <input id="password" type="password" placeholder="Password"></input>
+                <button id="submit">Login</button>
+                <p><span>or</span></p>
+                <button id="sign-up">Sign Up</button>
+            </div>
     
-</head>
-<body>
-    <p class="tip">Click on button in image container</p>
-<div class="cont">
-  <div class="form sign-in">
-    <h2>Welcome back,</h2>
-    <label>
-      <span>Email</span>
-      <input type="email" />
-    </label>
-    <label>
-      <span>Password</span>
-      <input type="password" />
-    </label>
-    <p class="forgot-pass">Forgot password?</p>
-    <button type="button" class="submit">Sign In</button>
-    <button type="button" class="gl-btn">Connect with <span>google</span></button>
-  </div>
-  <div class="sub-cont">
-    <div class="img">
-      <div class="img__text m--up">
-        <h2>New here?</h2>
-        <p>Sign up and discover great amount of new opportunities!</p>
-      </div>
-      <div class="img__text m--in">
-        <h2>One of us?</h2>
-        <p>If you already have an account, just sign in. We've missed you!</p>
-      </div>
-      <div class="img__btn">
-        <span class="m--up">Sign Up</span>
-        <span class="m--in">Sign In</span>
-      </div>
-    </div>
-    <div class="form sign-up">
-      <h2>Time to feel like home,</h2>
-      <label>
-        <span>Name</span>
-        <input type="text" />
-      </label>
-      <label>
-        <span>Email</span>
-        <input type="email" />
-      </label>
-      <label>
-        <span>Password</span>
-        <input type="password" />
-      </label>
-      <button type="button" class="submit">Sign Up</button>
-      <button type="button" class="fb-btn">Join with <span>google</span></button>
-    </div>
-  </div>
-</div>
-
-<a href="" target="_blank" class="icon-link">
-  <img src="./images/images/happy-doctor-celebrating-victory.jpg" alt="">
-</a>
-<a href="https://twitter.com/Cups_Lock" target="_blank" class="icon-link icon-link--twitter">
-  <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" alt="">
-</a>
-<script>
-    document.querySelector('.img__btn').addEventListener('click', function() {
-  document.querySelector('.cont').classList.toggle('s--signup');
-});
-</script>
-</body>
+            <div id="create-acct">
+                <h1>Create an Account</h1>
+                <input id="email-signup" type="text" placeholder="Email *"></input>
+                <input id="confirm-email-signup" type="email" placeholder="Confirm Email *"></input>
+                <input id="password-signup" type="password" placeholder="Password *"></input>
+                <input id="confirm-password-signup" type="password" placeholder="Confirm Password *"></input>
+                <button id="create-acct-btn">Create Account</button>
+                <button id="return-btn">Return to Login</button>
+            </div>
+        </div>
+    </body>
 </html>
