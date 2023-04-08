@@ -1,9 +1,17 @@
-
+:root{
+  --green:#27E1C1;
+  --darkgreen:#0EA293;
+  --light-color:#111;
+  --black:#444;
+  --box-shadow:.5rem .5rem 0 rgba (22, 160, 133, .2);
+  --text-shadow:.4rem .4rem 0 rgba(0, 0, 0, .2);
+  --border:.2rem solid var(--green);
+}
 h1 {
     margin-bottom: 8%;
     text-align: center;
     font-family: "Fredoka One", cursive;
-    color: #01a2a8;
+    color: var(--green);
     letter-spacing: 0.1em;
   }
   
@@ -12,7 +20,7 @@ h1 {
     margin-bottom: 5%;
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid #000;
+    border-bottom: var(--border);
     line-height: 0.1em;
   }
   
@@ -37,15 +45,16 @@ h1 {
   .login-container {
     background-color: white;
     padding: 7%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: var(--box-shadow);
     width: 40vw;
     margin: auto;
-    height: 70vh;
+    height: 60vh;
     margin-top: 15vh;
+    border: var(--border);
   }
   
   #submit, #create-acct-btn {
-    background-color: #AB1449;
+    background-color: var(--darkgreen);
     color: white;
     border: none;
     margin-top: 5%;
@@ -67,7 +76,7 @@ h1 {
   
   #return-btn {
     background: none;
-    color: grey;
+    color: var(--light-color);
     text-decoration: underline;
     border: none;
     margin-top: 3%;

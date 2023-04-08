@@ -21,27 +21,19 @@ const navSlide = () => {
   };
   
   navSlide();
-
- // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-  // Initialize Firebase
-var firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyATYDhTzQUCuz46Pu3ledwICGe9J-I8u4w",
   authDomain: "a-hospital-website.firebaseapp.com",
   projectId: "a-hospital-website",
   storageBucket: "a-hospital-website.appspot.com",
   messagingSenderId: "17198961804",
   appId: "1:17198961804:web:eb568fd979fce262d497a9",
-  measurementId: "G-FH90XBSB7S"}
+  measurementId: "G-FH90XBSB7S"
+};
+
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 // Get a reference to the appointments collection in the database
