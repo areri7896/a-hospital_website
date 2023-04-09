@@ -104,7 +104,7 @@ submitButton.addEventListener("click", function () {
       const user = userCredential.user;
 
       window.alert("Success! Welcome back!");
-      window.location = "./";
+      window.location = "./portal.html";
 
       // ...
     })
