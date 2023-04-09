@@ -104,7 +104,7 @@ submitButton.addEventListener("click", function () {
       const user = userCredential.user;
 
       window.alert("Success! Welcome back!");
-      window.location = "./createTask.html";
+      window.location = "./";
 
       // ...
     })
