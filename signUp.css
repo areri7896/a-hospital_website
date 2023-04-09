@@ -51,6 +51,7 @@ h1 {
     height: 60vh;
     margin-top: 15vh;
     border: var(--border);
+    border-radius: .5rem;
   }
   
   #submit, #create-acct-btn {

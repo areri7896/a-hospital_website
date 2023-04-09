@@ -444,7 +444,7 @@ section :nth-child(even){
 .appointment .row form h3{
     color: var(--black);
     padding-bottom: 1rem;
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
 .appointment .row form .box{

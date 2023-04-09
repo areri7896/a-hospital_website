@@ -52,7 +52,8 @@ h1 {
     margin: auto;
     height: 70vh;
     margin-top: 15vh;
-    /* border: var(--border); */
+    border: var(--border);
+    border-radius: .5rem;
   }
   
   #submit, #create-acct-btn {
@@ -78,7 +79,7 @@ h1 {
   
   #return-btn {
     background: none;
-    color: grey;
+    color: var(--black);
     text-decoration: underline;
     border: none;
     margin-top: 3%;
