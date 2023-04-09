@@ -1,15 +1,14 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// require('dotenv').config();
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+import {
+    appointmentsRef,
+} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+// import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyATYDhTzQUCuz46Pu3ledwICGe9J-I8u4w",
   authDomain: "a-hospital-website.firebaseapp.com",
-  databaseURL: "https://a-hospital-website-default-rtdb.firebaseio.com",
   projectId: "a-hospital-website",
   storageBucket: "a-hospital-website.appspot.com",
   messagingSenderId: "17198961804",
@@ -17,15 +16,8 @@ const firebaseConfig = {
   measurementId: "G-FH90XBSB7S"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
 // Get a reference to the appointments collection in the database
-var appointmentsRef = firebase.database().ref('appointments');
+const appointmentsRef = firebase.database().ref('appointments');
 
 // Get the form element
 var appointmentForm = document.getElementById('appointment-form');
