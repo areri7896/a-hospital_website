@@ -63,11 +63,13 @@
 }
 .main-content{
     margin-left: 345px;
+    margin-top: 0;
 }
 header{
     display: flex;
     justify-content: space-between;
     padding: 1rem;
+    box-shadow: var(--text-shadow);
 }
 .search-wrapper{
     border: var(--border);
@@ -95,4 +97,12 @@ header{
 .user-wrapper img{
     border-radius: 50%;
     margin-right: 1rem;
+}
+.user-wrapper h4{
+    margin-bottom: 0rem !important;
+}
+.user-wrapper small{
+    display: inline-block;
+    color: var(--darkgreen);
+    margin-top: -3px;
 }
