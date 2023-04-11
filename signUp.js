@@ -103,7 +103,7 @@ submitButton.addEventListener("click", function () {
       // Signed in
       const user = userCredential.user;
 
-      window.alert("Success! Welcome back!");
+      window.alert("Login Successful!!");
       window.location = "./portal.html";
 
       // ...

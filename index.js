@@ -49,6 +49,16 @@ function submitForm(event) {
 
   // Reset the form fields
   appointmentForm.reset();
+
+  if (
+    name == null ||
+    number == null ||
+    email == null ||
+    date == null
+  ) {
+    window.alert("Please fill out all required fields.");
+    isVerified = false;
+  }
 }
 
 const navSlide = () => {
