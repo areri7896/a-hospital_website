@@ -50,6 +50,13 @@
                         <h4>Newbie Areri </h4>
                         <small>Super Admin</small>
                     </div>
+                    <div class="logout" >
+                        <span class="icn" onclick="menuToggle();"><i class="las la-chevron-down"></i></span>
+                    <ul id="icn">
+                        <li><span><i class="las la-user-circle"></i></span><a href="#">Profile</a></li>
+                        <li><span><i class="las la-sign-out-alt"></i></span><a href="#">logout</a></li>
+                    </ul>
+                </div>
                 </div>
             </header>
     </div>
@@ -98,5 +105,11 @@
 
         </div>
     </main>
+    <script>
+        function menuToggle(){
+            const toggleMenu = document.querySelector('#icn');
+            toggleMenu.classList.toggle('active')
+        }
+    </script>
 </body>
 </html>
