@@ -80,7 +80,7 @@ createacctbtn.addEventListener("click", function () {
         // const user = userCredential.user;
         // ...
         window.alert("Success! Account created.");
-        window.location = "./createTask.html";
+        window.location = "./portal.html";
       })
       .catch((error) => {
         const errorCode = error.code;
