@@ -48,7 +48,7 @@ h1 {
   
   .login-container {
     background-color: white;
-    padding: 7%;
+    padding: 0 7% 7% 7%;
     box-shadow: var(--box-shadow);
     width: 40vw;
     margin: auto;
