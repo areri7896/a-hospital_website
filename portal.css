@@ -54,6 +54,13 @@
     padding-left: 1rem;
     font-size: 1.2rem;
 }
+.sidebar-menu a:hover{
+    background: #fff;
+    color: var(--darkgreen);
+    border-radius: .5rem 0 0 .5rem;
+    text-shadow: none;
+    padding: 1rem;
+}
 .sidebar-menu a.active{
     color: #0EA293;
     background: #fff;
