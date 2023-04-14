@@ -31,5 +31,5 @@ const handleSubmit = async(e)=>{
         description:description,
         completed:false,
         created:Timestamp.now()
-    })onclose()}catch(err){alert(err)}
-}
+    })onclose()}.catch(err){alert(err)};
+};
