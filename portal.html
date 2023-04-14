@@ -24,7 +24,7 @@
                 <li><a href=""><span class="las la-users"></span><span>customers</span></a></li>
                 <li><a href=""><span class="las la-user-nurse"></span><span>Doctors</span></a></li>
                 <li><a href=""><span class="las la-clipboard-list"></span><span>Appointments</span></a></li>
-                <li><a href=""><span class="las la-store"></span><span>Drugs and store</span></a></li>
+                <li ><a href="#"><span class="las la-store"></span><span onclick="drugToggle();">Drugs and store</span></a></li>
                 <li><a href=""><span class="las la-user-circle"></span><span>Accounts</span></a></li>
                 <li><a href=""><span  class="las la-cog"></span><span>Settings</span></a></li>
             </ul>
@@ -105,10 +105,23 @@
 
         </div>
     </main>
+    <!-- drugs and store section -->
+    <div class="drugs-store">
+        <form action="" class="drg" id="drg">
+            <input type="text" placeholder="name of drug">
+            <input type="number" placeholder="number">
+            <input type="text" placeholder="description">
+            <button type="submit">submit</button>
+        </form>
+    </div>
     <script>
         function menuToggle(){
             const toggleMenu = document.querySelector('#icn');
             toggleMenu.classList.toggle('active')
+        };
+        function drugToggle(){
+            const toggleDrug = document.querySelector('.drugs-store');
+            toggleDrug.classList.toggle('active')
         };
         function logOut(){
             const logout = document.querySelector('#logout');
@@ -117,5 +130,6 @@
         }
 
     </script>
+    <script src="dands.js"></script>
 </body>
 </html>

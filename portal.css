@@ -188,3 +188,32 @@ main{
 .card:last-child{
     color: var(--green);
 }
+.drugs-store{
+    margin-left: 345px;
+    padding: 2rem 1.5rem;
+    min-height: calc(50vh -50px);
+    visibility: hidden;
+    opacity: 0;
+}
+.drugs-store.active{
+    visibility: visible;
+    opacity: 1;
+}
+.drugs-store .drg input{
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    height: 30px;
+    width: 20vw;
+    border-radius: .5rem;
+    font-size: 1rem;
+    color: var(--darkgreen);
+}
+.drugs-store .drg button{
+    background: var(--green);
+    color:#fff;
+    width: 10vw;
+    height: 30px;
+    font-size: 1rem;
+    border: var(--border);
+    border-radius: .5rem;
+}

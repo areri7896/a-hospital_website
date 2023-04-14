@@ -2,8 +2,9 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import { getDatabase } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 import {
-    appointmentsRef,
-} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+    getFirestore
+} from "firebase/firestore";
+
 // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
 
 const firebaseConfig = {
@@ -18,6 +19,8 @@ const firebaseConfig = {
 
 // Get a reference to the appointments collection in the database
 const appointmentsRef = firebase.database().ref('appointments');
+const db = getFirestore(app)
+export{db};
 
 // Get the form element
 var appointmentForm = document.getElementById('appointment-form');
