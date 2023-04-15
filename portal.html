@@ -21,8 +21,8 @@
         <div class="sidebar-menu">
             <ul>
                 <li><a href="#" class="active"><span class="las la-igloo"></span><span>Dashboard</span></a></li>
-                <li><a href="#"><span class="las la-users"></span><span>customers</span></a></li>
-                <li><a href="#"><span class="las la-user-nurse"></span><span>Doctors</span></a></li>
+                <li><a href="#"><span class="las la-users"></span><span onclick="customersToggle();">customers</span></a></li>
+                <li><a href="#"><span class="las la-user-nurse"></span><span onclick="doctorsToggle();">Doctors</span></a></li>
                 <li><a href="#"><span class="las la-clipboard-list"></span><span onclick="appointmentToggle();">Appointments</span></a></li>
                 <li><a href="#"><span class="las la-store"></span><span onclick="drugToggle();">Drugs and store</span></a></li>
                 <li><a href="#"><span class="las la-user-circle"></span><span>Accounts</span></a></li>
@@ -107,6 +107,7 @@
     </main>
     <!-- customers section  -->
     <div class="customers">
+        <h1>Customers</h1>
         <form action="">
             <input type="text" placeholder="name">
             <input type="number" placeholder="age">
@@ -117,6 +118,7 @@
     <!-- end of customers -->
     <!-- doctors  section -->
     <div class="doctors">
+        <h1>Doctors</h1>
         <form action="">
             <input type="text" placeholder="name">
             <input type="text" placeholder="department">
@@ -127,6 +129,7 @@
     <!-- end of doctors section -->
     <!-- drugs and store section -->
     <div class="drugs-store">
+        <h1>Drugs and Store</h1>
         <form action="">
             <input type="text" placeholder="name of drug">
             <input type="number" placeholder="number">
@@ -162,6 +165,14 @@
         function menuToggle(){
             const toggleMenu = document.querySelector('#icn');
             toggleMenu.classList.toggle('active');
+        };
+        function customersToggle(){
+            const toggleCustomers = document.querySelector('.customers');
+            toggleCustomers.classList.toggle('active');
+        };
+        function doctorsToggle(){
+            const toggleDoctors = document.querySelector('.doctors');
+            toggleDoctors.classList.toggle('active');
         };
         function drugToggle(){
             const toggleDrug = document.querySelector('.drugs-store');
