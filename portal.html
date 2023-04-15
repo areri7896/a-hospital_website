@@ -150,46 +150,37 @@
     </div>
     <!-- appointments section ends here -->
     <script>
-    const myAppointment = {
-        name: 'name',
-        number: 'number',
-        email: 'email',
-        date: 'date',
-        time: 'time'
-        };
-        document.getElementById('name').innerHTML = myAppointment.name;
-        document.getElementById('time').innerHTML = myAppointment.time;
-        document.getElementById('date').innerHTML = myAppointment.date;
-        document.getElementById('phone').innerHTML = myAppointment.number;
+const myAppointment = {
+    name: 'name',
+    number: 'number',
+    email: 'email',
+    date: 'date',
+    time: 'time'
+};
+document.getElementById('name').innerHTML = myAppointment.name;
+document.getElementById('time').innerHTML = myAppointment.time;
+document.getElementById('date').innerHTML = myAppointment.date;
+document.getElementById('phone').innerHTML = myAppointment.number;
 
-        function menuToggle(){
-            const toggleMenu = document.querySelector('#icn');
-            toggleMenu.classList.toggle('active');
-        };
-        function customersToggle(){
-            const toggleCustomers = document.querySelector('.customers');
-            toggleCustomers.classList.toggle('active');
-        };
-        function doctorsToggle(){
-            const toggleDoctors = document.querySelector('.doctors');
-            toggleDoctors.classList.toggle('active');
-        };
-        function drugToggle(){
-            const toggleDrug = document.querySelector('.drugs-store');
-            toggleDrug.classList.toggle('active')
-        };
-        function appointmentToggle(){
-            const toggleAppointment = document.querySelector('.appointments');
-            toggleAppointment.classList.toggle('active')
-        };
+const toggleElement = selector => {
+const element = document.querySelector(selector);
+element.classList.toggle('active');
+};
 
-        function logOut(){
-            const logout = document.querySelector('#logout');
-            window.alert("You have been Logged out Successfully!.");
-        window.location = "./index.html";
-        };
+const menuToggle = () => toggleElement('#icn');
+const customersToggle = () => toggleElement('.customers');
+const doctorsToggle = () => toggleElement('.doctors');
+const drugToggle = () => toggleElement('.drugs-store');
+const appointmentToggle = () => toggleElement('.appointments');
 
-    </script>
-    <script src="dands.js"></script>
+
+const logOut = () => {
+  const logout = document.querySelector('#logout');
+  window.alert('You have been Logged out Successfully!.');
+  window.location = './index.html';
+};
+
+</script>
+<script src="dands.js"></script>
 </body>
 </html>
