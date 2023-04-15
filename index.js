@@ -17,31 +17,27 @@ const firebaseConfig = {
   measurementId: "G-FH90XBSB7S"
 };
 
-// Get a reference to the appointments collection in the database
+firebase.initializeApp(firebaseConfig);
+
 const appointmentsRef = firebase.database().ref('appointments');
-const db = getFirestore(app)
-export{db};
 
 // Get the form element
-var appointmentForm = document.getElementById('appointment-form');
+const appointmentForm = document.getElementById('appointment-form');
 
-// Add an event listener for when the form is submitted
 appointmentForm.addEventListener('submit', submitForm);
 
-// Function to submit the form data to the database
 function submitForm(event) {
-  // Prevent the form from submitting normally
   event.preventDefault();
 
   // Get the values from the form fields
-  var name = appointmentForm.querySelector('input[name="Name"]').value;
-  var number = appointmentForm.querySelector('input[name="number"]').value;
-  var email = appointmentForm.querySelector('input[name="email"]').value;
-  var date = appointmentForm.querySelector('input[name="date"]').value;
-  var time = appointmentForm.querySelector('input[name="time"]').value;
+  const name = appointmentForm.querySelector('input[name="Name"]').value;
+  const number = appointmentForm.querySelector('input[name="number"]').value;
+  const email = appointmentForm.querySelector('input[name="email"]').value;
+  const date = appointmentForm.querySelector('input[name="date"]').value;
+  const time = appointmentForm.querySelector('input[name="time"]').value;
 
   // Create a new appointment object with the form data
-  var newAppointment = {
+  const newAppointment = {
     name: name,
     number: number,
     email: email,
@@ -49,22 +45,15 @@ function submitForm(event) {
     time: time
   };
 
-  // Add the appointment data to the database
   appointmentsRef.push(newAppointment);
 
-  // Reset the form fields
   appointmentForm.reset();
 
-  if (
-    name == null ||
-    number == null ||
-    email == null ||
-    date == null
-  ) {
-    window.alert("Please fill out all required fields.");
-    isVerified = false;
-  }
+  // Show a success message
+  window.alert("Appointment booked successfully!");
 }
+
+
 
 const navSlide = () => {
   const burger = document.querySelector(".Hamb");
