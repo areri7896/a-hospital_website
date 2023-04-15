@@ -195,7 +195,7 @@ main{
 .card:last-child{
     color: var(--green);
 }
-.drugs-store{
+.drugs-store,.doctors,.customers{
     margin-left: 345px;
     padding: 2rem 1.5rem;
     min-height: calc(50vh -50px);
@@ -203,19 +203,24 @@ main{
     opacity: 0;
 }
 .drugs-store.active{
+    position: absolute;
+    top: 40vh;
+    right: 0;
+    left: 0;
     visibility: visible;
     opacity: 1;
 }
-.drugs-store .drg input{
+.drugs-store form input{
     border: var(--border);
     box-shadow: var(--box-shadow);
-    height: 30px;
+    height: 50px;
+    text-align: center;
     width: 20vw;
     border-radius: .5rem;
     font-size: 1rem;
-    color: var(--darkgreen);
+    color: var(--green);
 }
-.drugs-store .drg button{
+.drugs-store form button{
     background: var(--green);
     color:#fff;
     width: 10vw;
@@ -223,4 +228,40 @@ main{
     font-size: 1rem;
     border: var(--border);
     border-radius: .5rem;
+}
+
+.appointments{
+    margin-left: 345px;
+    padding: 2rem 1.5rem;
+    min-height: calc(40vh -50px);
+    position: absolute;
+    top: 30vh;
+    right: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+.appointments.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.appointments .para{
+    display: flex;
+    justify-content: space-between;
+}
+.appointments h1{
+    text-align: center;
+    padding: 2rem;
+    color: var(--darkgreen);
+}
+.appointments .para p{
+    background: var(--green);
+    width: 20%;
+    height: 50px;
+    border-radius: .5rem;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: top 20px;;
 }

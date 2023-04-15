@@ -38,13 +38,15 @@ function submitForm(event) {
   var number = appointmentForm.querySelector('input[name="number"]').value;
   var email = appointmentForm.querySelector('input[name="email"]').value;
   var date = appointmentForm.querySelector('input[name="date"]').value;
+  var time = appointmentForm.querySelector('input[name="time"]').value;
 
   // Create a new appointment object with the form data
   var newAppointment = {
     name: name,
     number: number,
     email: email,
-    date: date
+    date: date,
+    time: time
   };
 
   // Add the appointment data to the database

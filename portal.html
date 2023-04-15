@@ -23,10 +23,10 @@
                 <li><a href="#" class="active"><span class="las la-igloo"></span><span>Dashboard</span></a></li>
                 <li><a href="#"><span class="las la-users"></span><span>customers</span></a></li>
                 <li><a href="#"><span class="las la-user-nurse"></span><span>Doctors</span></a></li>
-                <li><a href="#"><span class="las la-clipboard-list"></span><span>Appointments</span></a></li>
+                <li><a href="#"><span class="las la-clipboard-list"></span><span onclick="appointmentToggle();">Appointments</span></a></li>
                 <li><a href="#"><span class="las la-store"></span><span onclick="drugToggle();">Drugs and store</span></a></li>
                 <li><a href="#"><span class="las la-user-circle"></span><span>Accounts</span></a></li>
-                <li><a href="#"><span  class="las la-cog"></span><span>Settings</span></a></li>
+                <li><a href="#"><span class="las la-cog"></span><span>Settings</span></a></li>
             </ul>
         </div>
     </div>
@@ -137,14 +137,28 @@
     <!-- end of drugs and store section -->
     <!-- appointments section -->
     <div class="appointments">
-        <h1>appointment</h1>
-        <p id="name"></p>
-        <p id="date"></p>
-        <p id="time"></p>
-        <p id="phone"></p>
+        <h1>Appointment</h1>
+        <div class="para">
+            <p id="name"></p>
+            <p id="date"></p>
+            <p id="time"></p>
+            <p id="phone"></p>
+        </div>
     </div>
     <!-- appointments section ends here -->
     <script>
+    const myAppointment = {
+        name: 'name',
+        number: 'number',
+        email: 'email',
+        date: 'date',
+        time: 'time'
+        };
+        document.getElementById('name').innerHTML = myAppointment.name;
+        document.getElementById('time').innerHTML = myAppointment.time;
+        document.getElementById('date').innerHTML = myAppointment.date;
+        document.getElementById('phone').innerHTML = myAppointment.number;
+
         function menuToggle(){
             const toggleMenu = document.querySelector('#icn');
             toggleMenu.classList.toggle('active');
@@ -153,10 +167,15 @@
             const toggleDrug = document.querySelector('.drugs-store');
             toggleDrug.classList.toggle('active')
         };
+        function appointmentToggle(){
+            const toggleAppointment = document.querySelector('.appointments');
+            toggleAppointment.classList.toggle('active')
+        };
+
         function logOut(){
             const logout = document.querySelector('#logout');
             window.alert("You have been Logged out Successfully!.");
-        window.location = "./login.html";
+        window.location = "./index.html";
         };
 
     </script>
