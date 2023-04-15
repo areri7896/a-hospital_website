@@ -151,7 +151,7 @@
     <!-- appointments section ends here -->
     <script>
 fetch('/getAppointmentData')
-  .then(response => response.json())
+  .then(res => res.json(data.json))
   .then(data => {
     myAppointment.name = data.name;
     myAppointment.number = data.number;
