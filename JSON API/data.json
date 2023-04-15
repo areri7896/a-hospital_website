@@ -1,0 +1,99 @@
+{
+    "section": {
+    "class": "appointment",
+    "id": "appointment",
+    "content": [
+    {
+    "h1": {
+    "class": "heading",
+    "content": [
+    {
+    "span": "appointment"
+    },
+    " book now!"
+    ]
+    }
+    },
+    {
+    "div": {
+    "class": "row",
+    "content": [
+    {
+    "div": {
+    "class": "image",
+    "content": {
+    "img": {
+    "src": "./images/images/examination.jpg",
+    "alt": ""
+    }
+    }
+    }
+    },
+    {
+    "form": {
+    "id": "appointment-form",
+    "action": "",
+    "method": "post",
+    "content": [
+    {
+    "h3": "Book an Appointment"
+    },
+    {
+    "input": {
+    "type": "text",
+    "name": "Name",
+    "placeholder": "Your Name",
+    "class": "box"
+    }
+    },
+    {
+    "input": {
+    "type": "number",
+    "name": "number",
+    "placeholder": "Your Phone Number starting with 0...",
+    "max-lenght": "10",
+    "class": "box"
+    }
+    },
+    {
+    "input": {
+    "type": "email",
+    "name": "email",
+    "placeholder": "Your email address",
+    "class": "box"
+    }
+    },
+    {
+    "input": {
+    "type": "time",
+    "name": "time",
+    "placeholder": "time",
+    "class": "box"
+    }
+    },
+    {
+    "input": {
+    "type": "date",
+    "name": "date",
+    "class": "box",
+    "placeholder": "mm/dd/yyyy"
+    }
+    },
+    {
+    "input": {
+    "type": "submit",
+    "name": "submit",
+    "value": "Book Your Appointment",
+    "class": "btn",
+    "onclick": "appointmentForm"
+    }
+    }
+    ]
+    }
+    }
+    ]
+    }
+    }
+    ]
+    }
+    }

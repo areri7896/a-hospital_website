@@ -1,7 +1,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
-import {initializeApp} from "firebase/app"
-import{getFirestore} from"firebase/firestore"
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+
 
 
 const firebaseConfig = {
@@ -23,13 +24,18 @@ import{db} from"https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 import{collection,addDoc,Timestamp} from 'firebase/firestore'
 
 // function to add new drug to firestore
-const handleSubmit = async(e)=>{
-    e.preventDefault(){
-    try await addDoc(collection(db,'drug'),{
-        title:title,
-        number:number,
-        description:description,
-        completed:false,
-        created:Timestamp.now()
-    })onclose()}.catch(err){alert(err)};
-};
+const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await addDoc(collection(db, "drug"), {
+        title: title,
+        number: number,
+        description: description,
+        completed: false,
+        created: Timestamp.now(),
+      });
+    } catch (err) {
+      alert(err);
+    }
+  };
+  

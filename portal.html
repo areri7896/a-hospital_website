@@ -150,17 +150,21 @@
     </div>
     <!-- appointments section ends here -->
     <script>
-const myAppointment = {
-    name: 'name',
-    number: 'number',
-    email: 'email',
-    date: 'date',
-    time: 'time'
-};
-document.getElementById('name').innerHTML = myAppointment.name;
-document.getElementById('time').innerHTML = myAppointment.time;
-document.getElementById('date').innerHTML = myAppointment.date;
-document.getElementById('phone').innerHTML = myAppointment.number;
+fetch('/getAppointmentData')
+  .then(response => response.json())
+  .then(data => {
+    myAppointment.name = data.name;
+    myAppointment.number = data.number;
+    myAppointment.email = data.email;
+    myAppointment.date = data.date;
+    myAppointment.time = data.time;
+
+    document.getElementById('name').innerHTML = myAppointment.name;
+    document.getElementById('time').innerHTML = myAppointment.time;
+    document.getElementById('date').innerHTML = myAppointment.date;
+    document.getElementById('phone').innerHTML = myAppointment.number;
+  })
+  .catch(error => console.error('Error retrieving appointment data:', error));
 
 const toggleElement = selector => {
 const element = document.querySelector(selector);
