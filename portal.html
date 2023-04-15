@@ -20,13 +20,13 @@
         </div>
         <div class="sidebar-menu">
             <ul>
-                <li><a href="" class="active"><span class="las la-igloo"></span><span>Dashboard</span></a></li>
-                <li><a href=""><span class="las la-users"></span><span>customers</span></a></li>
-                <li><a href=""><span class="las la-user-nurse"></span><span>Doctors</span></a></li>
-                <li><a href=""><span class="las la-clipboard-list"></span><span>Appointments</span></a></li>
-                <li ><a href="#"><span class="las la-store"></span><span onclick="drugToggle();">Drugs and store</span></a></li>
-                <li><a href=""><span class="las la-user-circle"></span><span>Accounts</span></a></li>
-                <li><a href=""><span  class="las la-cog"></span><span>Settings</span></a></li>
+                <li><a href="#" class="active"><span class="las la-igloo"></span><span>Dashboard</span></a></li>
+                <li><a href="#"><span class="las la-users"></span><span>customers</span></a></li>
+                <li><a href="#"><span class="las la-user-nurse"></span><span>Doctors</span></a></li>
+                <li><a href="#"><span class="las la-clipboard-list"></span><span>Appointments</span></a></li>
+                <li><a href="#"><span class="las la-store"></span><span onclick="drugToggle();">Drugs and store</span></a></li>
+                <li><a href="#"><span class="las la-user-circle"></span><span>Accounts</span></a></li>
+                <li><a href="#"><span  class="las la-cog"></span><span>Settings</span></a></li>
             </ul>
         </div>
     </div>
@@ -105,19 +105,49 @@
 
         </div>
     </main>
+    <!-- customers section  -->
+    <div class="customers">
+        <form action="">
+            <input type="text" placeholder="name">
+            <input type="number" placeholder="age">
+            <input type="text" placeholder="description">
+            <button type="submit">submit</button>
+        </form>
+    </div>
+    <!-- end of customers -->
+    <!-- doctors  section -->
+    <div class="doctors">
+        <form action="">
+            <input type="text" placeholder="name">
+            <input type="text" placeholder="department">
+            <input type="text" placeholder="description">
+            <button type="submit">submit</button>
+        </form>
+    </div>
+    <!-- end of doctors section -->
     <!-- drugs and store section -->
     <div class="drugs-store">
-        <form action="" class="drg" id="drg">
+        <form action="">
             <input type="text" placeholder="name of drug">
             <input type="number" placeholder="number">
             <input type="text" placeholder="description">
             <button type="submit">submit</button>
         </form>
     </div>
+    <!-- end of drugs and store section -->
+    <!-- appointments section -->
+    <div class="appointments">
+        <h1>appointment</h1>
+        <p id="name"></p>
+        <p id="date"></p>
+        <p id="time"></p>
+        <p id="phone"></p>
+    </div>
+    <!-- appointments section ends here -->
     <script>
         function menuToggle(){
             const toggleMenu = document.querySelector('#icn');
-            toggleMenu.classList.toggle('active')
+            toggleMenu.classList.toggle('active');
         };
         function drugToggle(){
             const toggleDrug = document.querySelector('.drugs-store');
