@@ -21,7 +21,7 @@ firebase.initializeApp(firebaseConfig);
 
 const appointmentsRef = firebase.database().ref('appointments');
 
-// Get the form element
+ // Get the form element
 const appointmentForm = document.getElementById('appointment-form');
 
 appointmentForm.addEventListener('submit', submitForm);
@@ -30,12 +30,11 @@ function submitForm(event) {
   event.preventDefault();
 
   // Get the values from the form fields
-  const name = appointmentForm.querySelector('input[name="Name"]').value;
+   const name = appointmentForm.querySelector('input[name="Name"]').value;
   const number = appointmentForm.querySelector('input[name="number"]').value;
   const email = appointmentForm.querySelector('input[name="email"]').value;
   const date = appointmentForm.querySelector('input[name="date"]').value;
   const time = appointmentForm.querySelector('input[name="time"]').value;
-
   // Create a new appointment object with the form data
   const newAppointment = {
     name: name,
@@ -45,15 +44,30 @@ function submitForm(event) {
     time: time
   };
 
-  appointmentsRef.push(newAppointment);
+//   appointmentsRef.push(newAppointment);
 
-  appointmentForm.reset();
+//   appointmentForm.reset();
 
-  // Show a success message
-  window.alert("Appointment booked successfully!");
-}
+//   // Show a success message
+//   window.alert("Appointment booked successfully!");
+// }
+const submitFormData = ()=>{
+  const formEl = document.querySelector('form');
+  formEl.addEventListener("submit",(event)=>{
+    event.preventDefault();
+    const formData = new FormData(formEl);
+    const data = new URLSearchParams(formData);
 
-
+    fetch("https://reqres.in/api/users",{
+      method: "POST",
+      body: data,
+    }).then((res)=>{
+      return res.json();
+    }).then((data)=>{
+      console.log(data);
+    });
+  });
+};
 
 const navSlide = () => {
   const burger = document.querySelector(".Hamb");
@@ -62,7 +76,6 @@ const navSlide = () => {
 
   burger.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
-
     navLinks.forEach((link, index) => {
       if (link.style.animation) {
         link.style.animation = "";
@@ -74,7 +87,7 @@ const navSlide = () => {
     });
     burger.classList.toggle("toggle");
   });
-  //
+  //   
 };
 
 navSlide();

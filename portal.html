@@ -150,8 +150,11 @@
     </div>
     <!-- appointments section ends here -->
     <script>
-fetch('/getAppointmentData')
-  .then(res => res.json(data.json))
+fetch('/getAppointmentData', {
+    method:"POST",
+    body: data,
+})
+  .then((res) => {res.json(data.json);})
   .then(data => {
     myAppointment.name = data.name;
     myAppointment.number = data.number;

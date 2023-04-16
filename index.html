@@ -266,12 +266,20 @@
          <section class="appointment" id="appointment">
             <h1 class="heading"><span>appointment</span> book now!</h1>
 
-            <div class="row">
+            <div class="row">index.js
                 <div class="image">
                     <img src="./images/images/examination.jpg" alt="">
                 </div>
 
-                 
+                <form id="appointment-form" action="" method="post">
+                    <h3>Book an Appointment</h3>
+                    <input type="text" name="Name" placeholder="Your Name" class="box">
+                    <input type="number" name="number" placeholder="Your Phone Number starting with 0..." max-lenght="10" class="box">
+                    <input type="email" name="email" placeholder="Your email address" class="box">
+                    <input type="time" name="time" placeholder="time" class="box">
+                    <input type="date" name="date" class="box" placeholder="mm/dd/yyyy">
+                    <input type="submit" name="submit" value="Book Your Appointment" class="btn" onclick="appointmentForm">
+                </form>
 
             </div>
 
