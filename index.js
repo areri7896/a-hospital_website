@@ -44,13 +44,11 @@ function submitForm(event) {
     time: time
   };
 
-//   appointmentsRef.push(newAppointment);
-
-//   appointmentForm.reset();
-
-//   // Show a success message
-//   window.alert("Appointment booked successfully!");
-// }
+  appointmentsRef.push(newAppointment);
+  appointmentForm.reset();
+  // Show a success message
+  window.alert("Appointment booked successfully!");
+}
 const submitFormData = ()=>{
   const formEl = document.querySelector('form');
   formEl.addEventListener("submit",(event)=>{
